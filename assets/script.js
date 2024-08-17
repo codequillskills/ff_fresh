@@ -8,7 +8,7 @@ const placeholderImage = "https://cdn.shopify.com/s/files/1/0533/2089/files/plac
 // Function to fetch products
 async function fetchProducts() {
     try {
-        const response = await fetch('/TEMP/assets/products.json');
+        const response = await fetch('https://codequillskills.github.io/ff_fresh/');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
