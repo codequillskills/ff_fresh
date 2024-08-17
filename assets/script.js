@@ -2,13 +2,13 @@ let products = []; // JSON data will be loaded here
 let currentIndex = 0;
 let filteredProducts = [];
 const itemsPerLoad = 20;
-const productClass = "product col"
-const placeholderImage = "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-4_large.png?v=1530129177"
+const productClass = "product col";
+const placeholderImage = "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-4_large.png?v=1530129177";
 
 // Function to fetch products
 async function fetchProducts() {
     try {
-        const response = await fetch('/assets/products.json');
+        const response = await fetch('./products.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -29,7 +29,7 @@ function renderProducts(productsToRender, startIndex, endIndex) {
         productElement.className = productClass;
         productElement.innerHTML = `
             <div class="product-image ratio ratio-1x1"><img class="object-fit-contain w-full" src="${product['img link'] || placeholderImage}" alt=""></div>
-            <div class="product-title text-center h4 mt-4 fw-bold"  style="color: #753617;">${product.Name}</div>
+            <div class="product-title text-center h4 mt-4 fw-bold" style="color: #753617;">${product.Name}</div>
             <div class="product-price text-center h1 mt-1 fw-bold" style="color: #729e3d;">₹${product["Selling Price"]}</div>
             <div class="product-description text-center mt-1">${product.Description}</div>
         `;
@@ -68,7 +68,6 @@ function handleSearch() {
     container.innerHTML = ''; // Clear existing products
     loadMore();
 }
-
 
 // Initialize
 async function init() {
