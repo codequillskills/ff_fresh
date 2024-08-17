@@ -1,27 +1,10 @@
-let products = []; // JSON data will be loaded here
+import products from './products.json';
+
 let currentIndex = 0;
 let filteredProducts = [];
 const itemsPerLoad = 20;
 const productClass = "product col";
 const placeholderImage = "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-collection-4_large.png?v=1530129177";
-
-// Function to fetch products
-// Function to fetch products
-async function fetchProducts() {
-    try {
-        // Adjust the path as needed
-        const response = await fetch('/assets/products.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const products = await response.json();
-        return products;
-    } catch (error) {
-        console.error('Error fetching products:', error);
-        return [];
-    }
-}
-
 
 // Function to render products
 function renderProducts(productsToRender, startIndex, endIndex) {
@@ -73,8 +56,7 @@ function handleSearch() {
 }
 
 // Initialize
-async function init() {
-    products = await fetchProducts();
+function init() {
     filteredProducts = products;
     loadMore();
     document.getElementById('loadMore').addEventListener('click', loadMore);
