@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Farm</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="assets/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <style>
+    body {
+      padding-top: 80px;
+    }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      font-size: 24px;
+      color: #25D366;
+      /* WhatsApp green color */
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+    }
+
+    .whatsapp-icon:hover {
+      color: #fff;
+      background-color: #25D366;
+
+    }
+
+    /* Add some styling for smaller screens */
+    @media (max-width: 768px) {
+
+      /* Make the navbar brand logo smaller */
+      .logo {
+        margin-left: -30px;
+      }
+
+      /* Make the search input smaller */
+      #searchInput {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      /* Adjust the product container layout */
+      #product-container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Make the load more button smaller */
+      #loadMore {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+
+      /* Adjust the navbar layout for smaller screens */
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Make the navbar brand logo smaller on smaller screens */
+      .navbar-brand {
+        max-width: 5%;
+        height: auto;
+      }
+
+      /* Make the search input smaller on smaller screens */
+      .form-inline {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+
+    /* Add some extra styling for very small screens (e.g., iPhone 5) */
+    @media (max-width: 480px) {
+      /* Make the navbar brand logo even smaller */
+
+
+      /* Make the search input even smaller */
+      #searchInput {
+        width: 100%;
+        padding: 5px;
+        font-size: 14px;
+      }
+
+      /* Adjust the product container layout */
+      #product-container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Make the load more button even smaller */
+      #loadMore {
+        font-size: 14px;
+        padding: 5px 10px;
+      }
+
+      /* Adjust the navbar layout for very small screens */
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Make the navbar brand logo even smaller on very small screens */
+      .navbar-brand {
+        max-width: 10%;
+        height: auto;
+      }
+
+      /* Make the search input even smaller on very small screens */
+      .form-inline {
+        width: 100%;
+        padding: 5px;
+      }
+    }
+
+    /* ... existing styles ... */
+
+    /* Make the logo larger on PC view */
+    footer {
+      text-align: center;
+    }
+
+    footer .row {
+      justify-content: center;
+    }
+
+    footer .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./Logo.png" alt="Logo" class="logo img-fluid" style="max-width: 150px; height:auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0 ms-auto">
+          <input type="text" id="searchInput" class="form-control rounded" style="border-radius: 20px;"
+            placeholder="Search products...">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <h1></h1>
+    <div class="mb-3">
+
+    </div>
+    <div id="product-container"
+      class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 row-gap-5">
+    </div>
+    <div class="text-center mt-5">
+      <button id="loadMore" class="btn btn-success py-2 px-4" style="background-color: #729e3d;">Load More</button>
+    </div>
+  </div>
+  <a href="https://wa.me/+919987678601" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp" style="border-radius: 50%; padding: 10px; font-size: 50px;"></i>
+  </a>
+
+  </div>
+</body>
+
+</html>
